@@ -1,1 +1,172 @@
-"Hello World" 
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Briefcase, Award, Mail, Phone, Linkedin, Github } from "lucide-react";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-100 via-white to-gray-100 p-10 font-sans">
+      {/* Header */}
+      <motion.header
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-16"
+      >
+        <h1 className="text-5xl font-extrabold text-gray-800 mb-3">Venkatesh Veduri</h1>
+        <p className="text-xl text-gray-600">
+          Java Full Stack Developer · 8 Years Experience
+        </p>
+      </motion.header>
+
+      {/* Summary Section */}
+      <section className="max-w-4xl mx-auto mb-20">
+        <Card className="rounded-2xl shadow-xl border border-gray-200">
+          <CardContent>
+            <CardTitle className="text-2xl font-semibold text-gray-800">
+              Professional Summary
+            </CardTitle>
+            <p className="mt-4 text-gray-700 leading-relaxed">
+              Results-driven Java Full Stack Developer with over 8 years of experience
+              in designing and deploying scalable applications using Spring Boot,
+              Angular, and AWS. Passionate about clean architecture, agile workflows,
+              and delivering user-focused solutions with a security-first mindset.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Skills Section */}
+      <section className="mb-20">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
+          Technical Skills
+        </h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { title: "Backend", items: ["Java 8-17", "Spring Boot", "REST APIs", "JWT"] },
+            { title: "Frontend", items: ["Angular 14+", "TypeScript", "HTML5", "CSS3"] },
+            { title: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB"] },
+            { title: "DevOps & Tools", items: ["AWS", "Docker", "Jenkins", "Git"] },
+            { title: "Testing", items: ["JUnit", "Mockito", "Postman"] },
+            { title: "Others", items: ["CI/CD", "Agile", "TDD"] },
+          ].map((category) => (
+            <Card key={category.title} className="rounded-2xl shadow-lg border border-gray-100">
+              <CardContent>
+                <CardTitle className="text-xl font-semibold text-gray-700">
+                  {category.title}
+                </CardTitle>
+                <ul className="mt-3 list-disc list-inside text-gray-600 text-sm">
+                  {category.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="mb-20">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
+          Key Projects
+        </h2>
+        <div className="grid gap-10 lg:grid-cols-2">
+          {[
+            {
+              title: "Enterprise HR Management Portal",
+              tech: "Java, Spring Boot, Angular, AWS",
+              description:
+                "Built a scalable HR platform with employee onboarding, payroll, and attendance features. Implemented secure JWT authentication and optimized front-end performance.",
+            },
+            {
+              title: "E-Commerce Microservices Platform",
+              tech: "Spring Cloud, RabbitMQ, Redis",
+              description:
+                "Decomposed monolithic architecture into microservices. Utilized Eureka, API Gateway, and Redis caching for enhanced performance and modularity.",
+            },
+            {
+              title: "Real-Time Chat Application",
+              tech: "WebSocket, Angular, MongoDB",
+              description:
+                "Engineered a real-time messaging app supporting multi-user communication with WebSocket and persistent storage using MongoDB.",
+            },
+          ].map((project) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Card className="rounded-2xl shadow-xl border border-gray-200">
+                <CardContent>
+                  <CardTitle className="text-xl font-semibold text-gray-700">
+                    {project.title}
+                  </CardTitle>
+                  <p className="mt-1 text-sm text-gray-500 italic">{project.tech}</p>
+                  <p className="mt-3 text-gray-600 leading-relaxed">
+                    {project.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Experience and Certifications */}
+      <section className="mb-20 max-w-5xl mx-auto grid gap-12 lg:grid-cols-2">
+        <div>
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+            <Briefcase className="w-6 h-6" /> Experience
+          </h2>
+          <ul className="space-y-6 text-gray-700">
+            <li>
+              <strong>MOURI Tech</strong> – Senior Full Stack Developer (2020 – Present)
+            </li>
+            <li>
+              <strong>Tech Mahindra</strong> – Java Developer (2017 – 2020)
+            </li>
+            <li>
+              <strong>InfyTech Solutions</strong> – Software Engineer (2015 – 2017)
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+            <Award className="w-6 h-6" /> Certifications
+          </h2>
+          <ul className="space-y-4 text-gray-700">
+            <li>Oracle Certified Java Programmer (OCPJP)</li>
+            <li>AWS Certified Developer – Associate</li>
+            <li>Spring Professional Certification</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center mt-16 text-gray-600">
+        <div className="mb-4 flex justify-center space-x-6">
+          <Button variant="ghost" size="icon">
+            <Mail className="w-5 h-5" />
+          </Button>
+          <Button variant="ghost" size="icon">
+            <Phone className="w-5 h-5" />
+          </Button>
+          <Button variant="ghost" size="icon">
+            <Linkedin className="w-5 h-5" />
+          </Button>
+          <Button variant="ghost" size="icon">
+            <Github className="w-5 h-5" />
+          </Button>
+        </div>
+        <p className="text-sm">© 2025 Venkatesh Veduri. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
