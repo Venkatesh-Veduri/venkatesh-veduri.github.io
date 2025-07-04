@@ -1118,9 +1118,9 @@ header .logo a {
 	text-shadow: none;
 	color: transparent;
 	width: 92px;
-	height: 15px;
+	height: 92px;
 	background: url("../images/logo.png") no-repeat center;
-	background-size: 92px 15px;
+	background-size: 92px 92px;
 }
 
 /**
@@ -1131,7 +1131,7 @@ header .logo a {
 	float: left;
 	width: 40px;
 	height: 40px;
-	margin-left: 20px;
+	margin-left: 13px;
 	margin-top: 13px;
 	display: block;
 	position: relative;
@@ -1496,6 +1496,7 @@ header .logo a {
 }
 #about .section-intro {
 	margin-bottom: 3rem;
+	max-width: 1000px;
 }
 
 .intro-info {
@@ -1518,7 +1519,7 @@ header .logo a {
 .about-content {
 	position: relative;
 	text-align: left;
-	max-width: 850px;
+	max-width: 1200px;
 	margin-bottom: 3.6rem;
 }
 .about-content h3 {
