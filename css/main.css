@@ -947,7 +947,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	height: .6rem;
 	background: #a1a1a1;
 	width: 100%;
-	margin-bottom: 6rem;
+	margin-bottom: 7.5rem;
 	padding: 0;
 	position: relative;
 }
@@ -959,8 +959,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	color: #313131;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
-	font-size: 1.5rem;
-	line-height: 2.4rem;
+	font-size: 1.2rem;
+}
+.skill-bars li p {
+	left: 0;
+	top: -3rem;
+	font-size: 1.4rem;
+	line-height: 1.7rem;
 }
 .skill-bars li .progress {
 	background: #313131;
@@ -977,19 +982,20 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	font-size: 1.1rem;
 	line-height: 1;
 	background: #313131;
-	padding: .6rem .6rem;
+	padding: .4rem .4rem;
 	border-radius: 3px;
 }
 .skill-bars li .progress span::after {
 	position: absolute;
 	left: 50%;
-	bottom: -5px;
+	bottom: 5px;
 	margin-left: -5px;
-	border-right: 5px solid transparent;
-	border-left: 5px solid transparent;
-	border-top: 5px solid #313131;
+	border-right: 2px solid transparent;
+	border-left: 2px solid transparent;
+	border-top: 2px solid #313131;
 	content: "";
 }
+
 
 .skill-bars li .percent5   { width: 5%; }
 .skill-bars li .percent10  { width: 10%; }
@@ -1118,9 +1124,9 @@ header .logo a {
 	text-shadow: none;
 	color: transparent;
 	width: 92px;
-	height: 92px;
+	height: 15px;
 	background: url("../images/logo.png") no-repeat center;
-	background-size: 92px 92px;
+	background-size: 92px 15px;
 }
 
 /**
@@ -1596,6 +1602,14 @@ header .logo a {
 	}
 	.button-section [class*="col-"] .button:first-child {
 		margin-right: 0;
+	}
+	.skill-bars li {
+	height: .6rem;
+	background: #a1a1a1;
+	width: 100%;
+	margin-bottom: 7.5rem;
+	padding: 0;
+	position: relative;
 	}
 }
 @media only screen and (max-width:600px) {
