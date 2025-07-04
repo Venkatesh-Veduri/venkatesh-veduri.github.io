@@ -1539,7 +1539,7 @@ header .logo a {
 	margin-left: 0;
 }
 .about-content .info-list li {
-	padding: 0 0 1.5rem 0;
+	padding: 0 0 1.2rem 0;
 	margin-bottom: .6rem;
 }
 .about-content .info-list li strong {
@@ -1547,14 +1547,14 @@ header .logo a {
 	color: #313131;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	line-height: 3rem;
 }
 .about-content .info-list li span {
 	display: block;
 	font-family: "poppins-regular", sans-serif;
 	color: #888888;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	line-height: 1;
 }
 .about-content .skill-bars {
@@ -1570,6 +1570,7 @@ header .logo a {
 .button-section [class*="col-"] .button:first-child {
 	margin-right: 4rem;
 }
+
 
 /**
  * responsive:
